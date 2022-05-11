@@ -1,4 +1,84 @@
 ﻿@page
 @model Web.CarDealership.BMW.Pages.Customer.EditModel
 @{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Изменить</h1>
+
+<h4>Заказчик</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Customers.ID" />
+            <div class="form-group">
+                <label asp-for="Customers.FullName" class="control-label"></label>
+                <input asp-for="Customers.FullName" class="form-control" />
+                <span asp-validation-for="Customers.FullName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customers.Address" class="control-label"></label>
+                <input asp-for="Customers.Address" class="form-control" />
+                <span asp-validation-for="Customers.Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customers.Phone" class="control-label"></label>
+                <input asp-for="Customers.Phone" class="form-control" />
+                <span asp-validation-for="Customers.Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customers.PassData" class="control-label"></label>
+                <input asp-for="Customers.PassData" class="form-control" />
+                <span asp-validation-for="Customers.PassData" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customers.AutoID" class="control-label"></label>
+                <select asp-for="Customers.AutoID" class="form-control" asp-items="ViewBag.AutoID"></select>
+                <span asp-validation-for="Customers.AutoID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customers.DateOrder" class="control-label"></label>
+                <input asp-for="Customers.DateOrder" class="form-control" />
+                <span asp-validation-for="Customers.DateOrder" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customers.DateSale" class="control-label"></label>
+                <input asp-for="Customers.DateSale" class="form-control" />
+                <span asp-validation-for="Customers.DateSale" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Customers.MarkCompletion" /> @Html.DisplayNameFor(model => model.Customers.MarkCompletion)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Customers.MarkPrice" /> @Html.DisplayNameFor(model => model.Customers.MarkPrice)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customers.PrecPrePlay" class="control-label"></label>
+                <input asp-for="Customers.PrecPrePlay" class="form-control" />
+                <span asp-validation-for="Customers.PrecPrePlay" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customers.StaffID" class="control-label"></label>
+                <select asp-for="Customers.StaffID" class="form-control" asp-items="ViewBag.StaffID"></select>
+                <span asp-validation-for="Customers.StaffID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Сохранить" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Вернуться к таблице</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

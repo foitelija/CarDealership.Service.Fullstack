@@ -1,0 +1,36 @@
+﻿@page
+@model Web.CarDealership.BMW.Pages.AEs.DetailsModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Подробная информация</h1>
+
+<div>
+    <h4>Доп. оборудование</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AdditionalEquipment.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AdditionalEquipment.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AdditionalEquipment.Characteristics)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AdditionalEquipment.Characteristics)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AdditionalEquipment.cost)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AdditionalEquipment.cost)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.AdditionalEquipment.ID">Изменить</a> |
+    <a asp-page="./Index">Вернуться к таблице</a>
+</div>
