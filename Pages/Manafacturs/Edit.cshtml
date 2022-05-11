@@ -1,0 +1,55 @@
+﻿@page
+@model Web.CarDealership.BMW.Pages.Manafacturs.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Изменить</h1>
+
+<h4>Производитель</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Manufactures.ID" />
+            <div class="form-group">
+                <label asp-for="Manufactures.Name" class="control-label"></label>
+                <input asp-for="Manufactures.Name" class="form-control" />
+                <span asp-validation-for="Manufactures.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Manufactures.Country" class="control-label"></label>
+                <input asp-for="Manufactures.Country" class="form-control" />
+                <span asp-validation-for="Manufactures.Country" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Manufactures.Address" class="control-label"></label>
+                <input asp-for="Manufactures.Address" class="form-control" />
+                <span asp-validation-for="Manufactures.Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Manufactures.Description" class="control-label"></label>
+                <input asp-for="Manufactures.Description" class="form-control" />
+                <span asp-validation-for="Manufactures.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Manufactures.StaffID" class="control-label"></label>
+                <select asp-for="Manufactures.StaffID" class="form-control" asp-items="ViewBag.StaffID"></select>
+                <span asp-validation-for="Manufactures.StaffID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Сохранить" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Вернуться к таблице</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
