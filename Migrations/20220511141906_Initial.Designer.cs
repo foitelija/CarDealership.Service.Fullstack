@@ -10,8 +10,8 @@ using Web.CarDealership.BMW.Data;
 namespace Web.CarDealership.BMW.Migrations
 {
     [DbContext(typeof(WebDB_Context))]
-    [Migration("20220511133555_AddCompanyMigration")]
-    partial class AddCompanyMigration
+    [Migration("20220511141906_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

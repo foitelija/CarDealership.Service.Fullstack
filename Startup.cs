@@ -27,7 +27,7 @@ namespace Web.CarDealership.BMW
         {
             services.AddRazorPages();
             services.AddDbContext<WebDB_Context>(options =>
-            options.UseSqlServer("Server = (localdb)\\MSSQLLocalDB; Database = WebDbBmw; Trusted_Connection = True; MultipleActiveResultSets = true"));
+            options.UseSqlServer("Server=localhost;Database=WebDbBmw;trusted_connection=true;Integrated Security=SSPI"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
