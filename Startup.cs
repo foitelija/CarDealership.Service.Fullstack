@@ -28,6 +28,10 @@ namespace Web.CarDealership.BMW
             services.AddRazorPages();
             services.AddDbContext<WebDB_Context>(options =>
             options.UseSqlServer("Server=localhost;Database=WebDbBmw;trusted_connection=true;Integrated Security=SSPI"));
+
+            //"Data Source = foitelijadb.mssql.somee.com; Integrated Security = False; Initial Catalog = foitelijadb; User ID = Foitelija_SQLLogin_1; Password = x2itcj9jnb; Connect Timeout = 15; Encrypt = False; Packet Size = 4096"));
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
