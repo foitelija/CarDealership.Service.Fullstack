@@ -32,7 +32,7 @@
                 @Html.DisplayNameFor(model => model.Staff[0].PassportData)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Staff[0].PositionID)
+                @Html.DisplayNameFor(model => model.Staff[0].Position)
             </th>
             <th></th>
         </tr>
@@ -60,7 +60,7 @@
                 @Html.DisplayFor(modelItem => item.PassportData)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Position.Name)
+                @Html.DisplayNameFor(modelItem => item.Position.Name)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.ID">Изменить</a> |
