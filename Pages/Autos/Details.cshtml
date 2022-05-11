@@ -1,0 +1,96 @@
+﻿@page
+@model Web.CarDealership.BMW.Pages.Autos.DetailsModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Подробная информация</h1>
+
+<div>
+    <h4>Автомобиль</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Auto.Brand)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Auto.Brand)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Auto.Manuf)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Auto.Manuf.ID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Auto.BT)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Auto.BT.ID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Auto.DateManufacture)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Auto.DateManufacture)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Auto.COLOR)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Auto.COLOR)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Auto.NumBody)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Auto.NumBody)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Auto.NumEngine)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Auto.NumEngine)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Auto.Characteristics)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Auto.Characteristics)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Auto.AE1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Auto.AE1)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Auto.AE2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Auto.AE2)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Auto.AE3)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Auto.AE3)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Auto.Cost)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Auto.Cost)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Auto.Staff)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Auto.Staff.ID)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Auto.ID">Изменить</a> |
+    <a asp-page="./Index">Вернуться к таблице</a>
+</div>

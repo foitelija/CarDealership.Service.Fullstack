@@ -1,0 +1,96 @@
+﻿@page
+@model Web.CarDealership.BMW.Pages.Customer.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Таблица</h1>
+
+<p>
+    <a asp-page="Create">Добавить</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Customers[0].FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customers[0].Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customers[0].Phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customers[0].PassData)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customers[0].Auto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customers[0].DateOrder)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customers[0].DateSale)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customers[0].MarkCompletion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customers[0].MarkPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customers[0].PrecPrePlay)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customers[0].Staff)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Customers) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PassData)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Auto.NumBody)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateOrder)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateSale)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MarkCompletion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MarkPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrecPrePlay)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Staff.FullName)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Изменить</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Подробнее</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Удалить</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

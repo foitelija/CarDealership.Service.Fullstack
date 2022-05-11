@@ -1,0 +1,88 @@
+﻿@page
+@model Web.CarDealership.BMW.Pages.Customer.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Удалить</h1>
+
+<h3>Вы действительно хотите удалить?</h3>
+<div>
+    <h4>Заказчик</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Customers.FullName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Customers.FullName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Customers.Address)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Customers.Address)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Customers.Phone)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Customers.Phone)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Customers.PassData)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Customers.PassData)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Customers.Auto)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Customers.Auto.ID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Customers.DateOrder)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Customers.DateOrder)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Customers.DateSale)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Customers.DateSale)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Customers.MarkCompletion)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Customers.MarkCompletion)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Customers.MarkPrice)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Customers.MarkPrice)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Customers.PrecPrePlay)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Customers.PrecPrePlay)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Customers.Staff)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Customers.Staff.ID)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Customers.ID" />
+        <input type="submit" value="Удалить" class="btn btn-danger" /> |
+        <a asp-page="./Index">Вернуться к таблице</a>
+    </form>
+</div>

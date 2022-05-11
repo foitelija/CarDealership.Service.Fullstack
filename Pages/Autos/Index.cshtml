@@ -1,0 +1,97 @@
+﻿@page
+@model Web.CarDealership.BMW.Pages.Autos.IndexModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Таблица</h1>
+
+<p>
+    <a asp-page="Create">Добавить</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Auto[0].Brand)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Auto[0].Manuf)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Auto[0].BT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Auto[0].DateManufacture)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Auto[0].COLOR)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Auto[0].NumBody)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Auto[0].NumEngine)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Auto[0].Characteristics)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Auto[0].AdditionalEquipment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Auto[0].Cost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Auto[0].Staff)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Auto) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Brand)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Manuf.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BT.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateManufacture)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.COLOR)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumBody)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumEngine)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Characteristics)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AE1)<br>
+                @Html.DisplayFor(modelItem => item.AE2)<br>
+                @Html.DisplayFor(modelItem => item.AE3)<br>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Staff.FullName)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Изменить</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Подробнее</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Удалить</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
