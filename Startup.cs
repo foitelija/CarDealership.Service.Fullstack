@@ -4,10 +4,12 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Web.CarDealership.BMW.Data;
 
 namespace Web.CarDealership.BMW
 {
@@ -24,6 +26,8 @@ namespace Web.CarDealership.BMW
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            services.AddDbContext<WebDB_Context>(options =>
+            options.UseSqlServer("Server = (localdb)\\MSSQLLocalDB; Database = WebDbBmw; Trusted_Connection = True; MultipleActiveResultSets = true"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

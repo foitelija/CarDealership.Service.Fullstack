@@ -28,6 +28,6 @@ namespace Web.CarDealership.BMW.Models
 
         public IList<Customers> Customers { get; set; }
         public IList<Auto> Auto { get; set; }
-        public IList<Manufacturers> Manufacturers { get; set; }
+        public IList<Manufactures> Manufactures { get; set; }
     }
 }
